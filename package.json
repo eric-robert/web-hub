@@ -1,8 +1,12 @@
 {
   "name": "ts-react",
   "description": "Boilerplate for TS-React",
+  "homepage": "https://eric-robert.github.io/web-hub",
   "scripts": {
-    "start": "react-scripts start"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
@@ -10,6 +14,7 @@
     "react-scripts": "^5.0.1"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.3",
