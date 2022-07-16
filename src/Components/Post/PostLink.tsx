@@ -30,7 +30,7 @@ export default function PostLink ( props : Props) {
     } as CSSProperties
 
     const select = () => {
-        navigate(`/notes/${props.path}.md`);
+        navigate(`/web-hub/notes/${props.path}.md`);
     }
 
     return <div className='PostLink-Container' style={style}>

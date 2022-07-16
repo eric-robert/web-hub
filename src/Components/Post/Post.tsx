@@ -10,7 +10,7 @@ export default function Post ( props : Props) {
     const [postContent, setPostContent] = useState('')
 
     useEffect(() => {
-        fetch(`/posts/${props.postName}`)
+        fetch(`/web-hub/posts/${props.postName}`)
             .then(response => response.text())
             .then(text => setPostContent(text))
     });

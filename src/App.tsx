@@ -13,11 +13,11 @@ export default function App() {
 
     return <BrowserRouter>
         <Routes>
-            <Route path="/"             element={<About/>}      />
-            <Route path="/about"        element={<About/>}      />
-            <Route path="/notes/:post"  element={<Note/>}      />
-            <Route path="/notes"        element={<Notes/>}      />
-            <Route path="/projects"     element={<Projects/>}   />
+            <Route path="/web-hub/"             element={<About/>}      />
+            <Route path="/web-hub/about"        element={<About/>}      />
+            <Route path="/web-hub/notes/:post"  element={<Note/>}      />
+            <Route path="/web-hub/notes"        element={<Notes/>}      />
+            <Route path="/web-hub/projects"     element={<Projects/>}   />
         </Routes>
     </BrowserRouter>
 

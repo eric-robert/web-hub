@@ -15,7 +15,7 @@ export default function Footer () {
         
         <Left width={200}>
             <Center width={40}>
-                <Image src="/Logo.png" link="/" height={40}/>
+                <Image src="/web-hub/Logo.png" link="/" height={40}/>
             </Center>    
         </Left>
 

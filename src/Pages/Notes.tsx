@@ -15,7 +15,7 @@ export default function About() {
     const [posts, setPosts] = useState<PostMetaData[]>(undefined);
 
     useEffect(() => {
-        fetch("/posts/index.json")
+        fetch("/web-hub/posts/index.json")
             .then(response => response.json())
             .then(data => setPosts(data));
     }, []);
