@@ -1,3 +1,3 @@
-# A personal website for myself
+# Personal Website
 
-Currently a heavy work in progress
+Major WIP
