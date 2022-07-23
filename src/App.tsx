@@ -14,37 +14,41 @@ export default function () {
     const currentRoute = useLocation()
     const navigate = useNavigate();
 
-    const projectActive = currentRoute.pathname.includes("/project")
+    const projectActive = currentRoute.pathname.includes("web-hub/project")
     const projectColor = projectActive ? "accent" : undefined
 
-    const writingActive = currentRoute.pathname.includes("/writing")
+    const writingActive = currentRoute.pathname.includes("web-hub/writing")
     const writingColor = writingActive ? "accent" : undefined
     
-    const rootActive = currentRoute.pathname == "/"
+    const rootActive = currentRoute.pathname == "/web-hub"
     const rootColor = rootActive ? "accent" : undefined
+
+    if ( !currentRoute.pathname.startsWith('/web-hub')){
+        setTimeout(() => navigate('/web-hub'))
+    }
     
     const icons = [
         <Button
             key={1}
             icon={<Book color={writingColor}/>}
             onClick={() => {
-                navigate("/writing")
+                navigate("web-hub/writing")
             }}
         />,
         <Button
             key={0}
             icon={<Deploy color={projectColor}/>}
             onClick={() => {
-                navigate("/project")
+                navigate("web-hub/project")
             }}
         />
     ]
 
     const children = <Routes >
-        <Route path="/" element={<Home/>} />
-        <Route path="/project" element={<Projects/>} />
-        <Route path="/writing/:id" element={<Writing/>} />
-        <Route path="/writing" element={<Writings/>} />
+        <Route path="web-hub/" element={<Home/>} />
+        <Route path="web-hub/project" element={<Projects/>} />
+        <Route path="web-hub/writing/:id" element={<Writing/>} />
+        <Route path="web-hub/writing" element={<Writings/>} />
     </Routes>
 
     return <Grommet theme={theme} full>

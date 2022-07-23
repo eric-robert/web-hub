@@ -29,7 +29,7 @@ export default function ( props : Props ) {
                     level='3' 
                     margin='small' 
                     style={{ cursor: 'pointer' }} 
-                    onClick={() => {navigate('/')}}>
+                    onClick={() => {navigate('/web-hub')}}>
                     {props.title}
                 </Heading>
                 <div>
